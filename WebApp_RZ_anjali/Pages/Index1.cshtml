@@ -1,0 +1,73 @@
+﻿@page
+@model Index1Model
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<h1>My First Web Page</h1>
+
+<h1>Haii @Model.Name</h1>
+
+@foreach (var item in Model.Hobbies)
+{
+    <h3>@item</h3>
+}
+
+@if (Model.Hobbies.Count > 3)
+{
+    <h2>You have many hobbies!</h2>
+}
+else
+{
+    <h2>You have few hobbies!</h2>
+}
+
+
+<hr />
+<hr />
+
+@{
+    foreach (var item in Model.Hobbies)
+    {
+        <h3>@item</h3>
+    }
+
+    if (Model.Hobbies.Count > 3)
+    {
+        <h2>You have many hobbies!</h2>
+    }
+    else
+    {
+        <h2>You have few hobbies!</h2>
+    }
+}
+<hr/>
+<hr/>
+@{
+    var i = 1;
+    while (i <= 10)
+    {
+        <h4>@i*@Model.num=@(i*Model.num)</h4>
+        i++;
+    }
+}
+
+<hr />
+<hr />
+
+@{
+    var numbers = Enumerable.Range(30, 10);
+
+    foreach (var item in numbers)
+    {
+        <h3> @item x @Model.num = @(item * Model.num) </h3>
+    }
+}
+
+</div>
+

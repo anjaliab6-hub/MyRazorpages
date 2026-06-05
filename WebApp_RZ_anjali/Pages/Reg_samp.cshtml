@@ -1,0 +1,38 @@
+﻿@page
+@model WebApp_RZ_anjali.Pages.Reg_sampModel
+@{
+}
+
+@if (Model.IsPosted)
+{
+    <h3>Name : @Model.Name</h3>
+    <h3>Age : @Model.Age</h3>
+    <h3>Email : @Model.Email</h3>
+    <h3>Mobile : @Model.Mob</h3>
+    <hr />
+}
+
+<div class="row">
+    <div class="col-lg-4">
+        <form asp-page-handler="Edit" method="post">
+
+            <label>Enter Name</label>
+            <input type="text" name="Name" class="form-control" />
+            <br />
+
+            <label>Enter Age</label>
+            <input type="number" name="Age" class="form-control" />
+            <br />
+
+            <label>Enter Email</label>
+            <input type="email" name="Email" class="form-control" />
+            <br />
+
+            <label>Enter Mobile</label>
+            <input type="number" name="Mob" class="form-control" />
+            <br />
+
+            <button type="submit" class="btn btn-info">EDIT</button>
+        </form>
+    </div>
+</div>

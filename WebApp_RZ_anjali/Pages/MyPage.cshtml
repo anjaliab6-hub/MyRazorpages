@@ -1,0 +1,21 @@
+﻿@page
+@model WebApp_RZ_anjali.Pages.MyPageModel
+@{
+}
+
+<h1>@ViewData["Message"]</h1>
+
+@{
+    var data = (List<string>)ViewData["Items"];
+}
+
+<h1>@data[2]</h1>
+
+<hr />
+<hr />
+<hr />
+
+<h1>@Model.Haii</h1>  @* access the value by get property *@
+<h1>@ViewData["Haii"]</h1>   @* access the value if it set as [viewdata] on declaretion time *@
+
+

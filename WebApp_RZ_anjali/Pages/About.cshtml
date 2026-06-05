@@ -1,0 +1,60 @@
+﻿@page
+@model WebApp_RZ_anjali.Pages.AboutModel
+@{
+}
+<h1 class="big-info">Here details about me</h1>
+<h1 class="bg-info">MY ABOUT PAGE</h1>
+
+
+
+<form method="post">
+    <button class="btn btn-primary">Click</button> <br />
+    <a href="/About" class="btn btn-primary">to Get</a>
+</form>
+<hr />
+<hr />
+<hr />
+<h1>@Model.message</h1>
+<hr />
+<div class="row">
+    <div class="col-lg-2">
+        <form asp-page-handler="edit" method="post">
+            <input type="text" name="fname" value=""/>
+            <input type="text" name="lname" value=""/>
+            <input type="text" name="phone" value="" />
+            <input type="text" name="city" value="" />
+            <input type="text" name="email" value=""/>
+            <button class="btn btn-info">EDIT</button>
+        </form>
+
+    </div>
+    <div class="col-lg-2">
+        <form asp-page-handler="delete" method="post">
+            <button class="btn btn-info">DELETE</button>
+        </form>
+
+    </div>
+    <div class="col-lg-2">
+        <form asp-page-handler="view" method="post" asp-route-id="9">
+            <button class="btn btn-info">VIEW</button>
+        </form>
+
+    </div>
+    <hr />
+    <hr />
+    <hr />
+    <div class="row">
+        <div class="col-lg-2">
+            <form method="post">
+                <button class="btn btn-info" asp-page-handler="RegisterAsync">register</button>
+                <button class="btn btn-warning" asp-page-handler="Info">info</button>
+            </form>
+
+        </div>
+    </div>
+    <br />
+    <hr />
+    <hr />
+    <br />
+
+</div>
