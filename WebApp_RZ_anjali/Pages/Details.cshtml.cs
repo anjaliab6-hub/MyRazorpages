@@ -29,15 +29,15 @@ namespace WebApp_RZ_anjali.Pages
             }
 
             var movie = await _context.Movie.FirstOrDefaultAsync(m => m.Id == id);
-            //if (movie == null)
-            //{
-            //    return NotFound();
-            //}
-            //else
-            //{
-            //    Movie = movie;
-            //}
-            Console.WriteLine(movie);
+            if (movie == null)
+            {
+                return NotFound();
+            }
+            else
+            {
+                Movie = movie;
+            }
+            // Console.WriteLine(movie);
 
             return Page();
         }
